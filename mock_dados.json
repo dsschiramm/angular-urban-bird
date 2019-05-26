@@ -1,0 +1,523 @@
+{
+  "listOffer": [
+    {
+      "id": 1,
+      "category": "restaurante",
+      "title": "Super Burger",
+      "description": "Rodízio de Mini-hambúrger com opção de entrada.",
+      "advertiser": "Original Burger",
+      "value": 29.9,
+      "spotlight": true,
+      "images": [
+        {
+          "url": "/assets/ofertas/1/img1.jpg"
+        },
+        {
+          "url": "/assets/ofertas/1/img2.jpg"
+        },
+        {
+          "url": "/assets/ofertas/1/img3.jpg"
+        },
+        {
+          "url": "/assets/ofertas/1/img4.jpg"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "category": "restaurante",
+      "title": "Cozinha Mexicana",
+      "description": "Almoço ou Jantar com Rodízio Mexicano delicioso.",
+      "advertiser": "Mexicana",
+      "value": 32.9,
+      "spotlight": true,
+      "images": [
+        {
+          "url": "/assets/ofertas/2/img1.jpg"
+        },
+        {
+          "url": "/assets/ofertas/2/img2.jpg"
+        },
+        {
+          "url": "/assets/ofertas/2/img3.jpg"
+        },
+        {
+          "url": "/assets/ofertas/2/img4.jpg"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "category": "diversao",
+      "title": "Estância das águas",
+      "description": "Diversão garantida com piscinas, trilhas e muito mais.",
+      "advertiser": "Estância das águas",
+      "value": 31.9,
+      "spotlight": true,
+      "images": [
+        {
+          "url": "/assets/ofertas/3/img1.jpg"
+        },
+        {
+          "url": "/assets/ofertas/3/img2.jpg"
+        },
+        {
+          "url": "/assets/ofertas/3/img3.jpg"
+        },
+        {
+          "url": "/assets/ofertas/3/img4.jpg"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "category": "restaurante",
+      "title": "Big Burger Attack",
+      "description": "Rodízio de Mini-hambúrger com opção de entrada.",
+      "advertiser": "Alternative Burger",
+      "value": 34.9,
+      "spotlight": false,
+      "images": [
+        {
+          "url": "/assets/ofertas/1/img1.jpg"
+        },
+        {
+          "url": "/assets/ofertas/1/img2.jpg"
+        },
+        {
+          "url": "/assets/ofertas/1/img3.jpg"
+        },
+        {
+          "url": "/assets/ofertas/1/img4.jpg"
+        }
+      ]
+    }
+  ],
+  "how-to-use": [
+    {
+      "offer_id": 1,
+      "description": "Não é necessário agendar"
+    },
+    {
+      "offer_id": 2,
+      "description": "Válido de segunda a quinta das 12h as 23h"
+    },
+    {
+      "offer_id": 3,
+      "description": "Não é necessário agendar"
+    },
+    {
+      "offer_id": 4,
+      "description": "Necessário agendar com no mínimo 48 horas de antecedência"
+    },
+    {
+      "offer_id": 5,
+      "description": "Válido de segunda a sábado das 12h as 23h. Necessário agendamento prévio"
+    },
+    {
+      "offer_id": 6,
+      "description": "Não é necessário agendar. Sujeito à fila."
+    }
+  ],
+  "where-is": [
+    {
+      "offer_id": 1,
+      "description": "Avenida João da Silva, 255, São Paulo - SP"
+    },
+    {
+      "offer_id": 2,
+      "description": "Rua Francisco Mendes, 1000, Rio de Janeiro - SP "
+    },
+    {
+      "offer_id": 3,
+      "description": "Avenida Lúcio Rodrigues Alves, 33, Fortaleza - CE"
+    },
+    {
+      "offer_id": 4,
+      "description": "Avenida José de Oliveira, 550, Campo Grande - MS"
+    },
+    {
+      "offer_id": 5,
+      "description": "Avenida Júlia Abrão, 77, São Paulo - SP"
+    },
+    {
+      "offer_id": 6,
+      "description": "Estrada Maria das Graças, 12, Salvador - BA "
+    }
+  ],
+  "order": [
+    {
+      "address": "Rua Centro",
+      "numeral": "1",
+      "complement": "aaaa",
+      "paymentForm": "dinheiro",
+      "id": 1
+    },
+    {
+      "address": "Rua Centro",
+      "numeral": "1",
+      "complement": "aaaa",
+      "paymentForm": "dinheiro",
+      "id": 2
+    },
+    {
+      "address": "rausda",
+      "numeral": "1",
+      "complement": "aqa",
+      "paymentForm": "debito",
+      "id": 3
+    },
+    {
+      "address": "rausda",
+      "numeral": "1",
+      "complement": "aqa",
+      "paymentForm": "debito",
+      "id": 4
+    },
+    {
+      "address": "rausda",
+      "numeral": "1",
+      "complement": "aqa",
+      "paymentForm": "debito",
+      "id": 5
+    },
+    {
+      "address": "rausda",
+      "numeral": "1",
+      "complement": "aqa",
+      "paymentForm": "debito",
+      "id": 6
+    },
+    {
+      "address": "rara",
+      "numeral": "1",
+      "complement": "wsawd",
+      "paymentForm": "dinheiro",
+      "id": 7
+    },
+    {
+      "address": "adwadwa",
+      "numeral": "2",
+      "complement": "asdw",
+      "paymentForm": "dinheiro",
+      "id": 8
+    },
+    {
+      "address": "awdawda",
+      "numeral": "12",
+      "complement": "dwadw",
+      "paymentForm": "dinheiro",
+      "id": 9
+    },
+    {
+      "address": "1231231",
+      "numeral": "123",
+      "complement": "123",
+      "paymentForm": "dinheiro",
+      "id": 10
+    },
+    {
+      "address": "123123",
+      "numeral": "123",
+      "complement": "123",
+      "paymentForm": "dinheiro",
+      "id": 11
+    },
+    {
+      "address": "tttttttttttttt",
+      "numeral": "1",
+      "complement": "ttttttttt",
+      "paymentForm": "dinheiro",
+      "items": [
+        {
+          "id": 4,
+          "image": {
+            "url": "/assets/ofertas/3/img1.jpg"
+          },
+          "title": "Estância das águas",
+          "description": "Diversão garantida com piscinas, trilhas e muito mais.",
+          "value": 31.9,
+          "quantity": 4
+        },
+        {
+          "id": 1,
+          "image": {
+            "url": "/assets/ofertas/1/img1.jpg"
+          },
+          "title": "Super Burger",
+          "description": "Rodízio de Mini-hambúrger com opção de entrada.",
+          "value": 29.9,
+          "quantity": 3
+        },
+        {
+          "id": 2,
+          "image": {
+            "url": "/assets/ofertas/2/img1.jpg"
+          },
+          "title": "Cozinha Mexicana",
+          "description": "Almoço ou Jantar com Rodízio Mexicano delicioso.",
+          "value": 32.9,
+          "quantity": 2
+        }
+      ],
+      "id": 12
+    },
+    {
+      "address": "123",
+      "numeral": "123",
+      "complement": "123",
+      "paymentForm": "dinheiro",
+      "items": [
+        {
+          "id": 4,
+          "image": {
+            "url": "/assets/ofertas/3/img1.jpg"
+          },
+          "title": "Estância das águas",
+          "description": "Diversão garantida com piscinas, trilhas e muito mais.",
+          "value": 31.9,
+          "quantity": 3
+        }
+      ],
+      "id": 13
+    },
+    {
+      "address": "123",
+      "numeral": "123",
+      "complement": "123",
+      "paymentForm": "dinheiro",
+      "items": [
+        {
+          "id": 4,
+          "image": {
+            "url": "/assets/ofertas/3/img1.jpg"
+          },
+          "title": "Estância das águas",
+          "description": "Diversão garantida com piscinas, trilhas e muito mais.",
+          "value": 31.9,
+          "quantity": 3
+        }
+      ],
+      "id": 14
+    },
+    {
+      "address": "123",
+      "numeral": "123",
+      "complement": "123",
+      "paymentForm": "dinheiro",
+      "items": [
+        {
+          "id": 1,
+          "image": {
+            "url": "/assets/ofertas/1/img1.jpg"
+          },
+          "title": "Super Burger",
+          "description": "Rodízio de Mini-hambúrger com opção de entrada.",
+          "value": 29.9,
+          "quantity": 5
+        }
+      ],
+      "id": 15
+    },
+    {
+      "address": "123",
+      "numeral": "123",
+      "complement": "123",
+      "paymentForm": "dinheiro",
+      "items": [
+        {
+          "id": 1,
+          "image": {
+            "url": "/assets/ofertas/1/img1.jpg"
+          },
+          "title": "Super Burger",
+          "description": "Rodízio de Mini-hambúrger com opção de entrada.",
+          "value": 29.9,
+          "quantity": 4
+        }
+      ],
+      "id": 16
+    },
+    {
+      "address": "123",
+      "numeral": "123",
+      "complement": "123",
+      "paymentForm": "dinheiro",
+      "items": [
+        {
+          "id": 1,
+          "image": {
+            "url": "/assets/ofertas/1/img1.jpg"
+          },
+          "title": "Super Burger",
+          "description": "Rodízio de Mini-hambúrger com opção de entrada.",
+          "value": 29.9,
+          "quantity": 4
+        }
+      ],
+      "id": 17
+    },
+    {
+      "address": "123",
+      "numeral": "123",
+      "complement": "123",
+      "paymentForm": "dinheiro",
+      "items": [
+        {
+          "id": 1,
+          "image": {
+            "url": "/assets/ofertas/1/img1.jpg"
+          },
+          "title": "Super Burger",
+          "description": "Rodízio de Mini-hambúrger com opção de entrada.",
+          "value": 29.9,
+          "quantity": 6
+        }
+      ],
+      "id": 18
+    },
+    {
+      "address": "123",
+      "numeral": "123",
+      "complement": "123",
+      "paymentForm": "dinheiro",
+      "items": [
+        {
+          "id": 1,
+          "image": {
+            "url": "/assets/ofertas/1/img1.jpg"
+          },
+          "title": "Super Burger",
+          "description": "Rodízio de Mini-hambúrger com opção de entrada.",
+          "value": 29.9,
+          "quantity": 4
+        }
+      ],
+      "id": 19
+    },
+    {
+      "address": "´123",
+      "numeral": "123",
+      "complement": "123",
+      "paymentForm": "dinheiro",
+      "items": [
+        {
+          "id": 4,
+          "image": {
+            "url": "/assets/ofertas/3/img1.jpg"
+          },
+          "title": "Estância das águas",
+          "description": "Diversão garantida com piscinas, trilhas e muito mais.",
+          "value": 31.9,
+          "quantity": 4
+        }
+      ],
+      "id": 20
+    },
+    {
+      "address": "123",
+      "numeral": "123",
+      "complement": "123",
+      "paymentForm": "dinheiro",
+      "items": [
+        {
+          "id": 1,
+          "image": {
+            "url": "/assets/ofertas/1/img1.jpg"
+          },
+          "title": "Super Burger",
+          "description": "Rodízio de Mini-hambúrger com opção de entrada.",
+          "value": 29.9,
+          "quantity": 4
+        }
+      ],
+      "id": 21
+    },
+    {
+      "address": "123",
+      "numeral": "123",
+      "complement": "123",
+      "paymentForm": "dinheiro",
+      "items": [
+        {
+          "id": 1,
+          "image": {
+            "url": "/assets/ofertas/1/img1.jpg"
+          },
+          "title": "Super Burger",
+          "description": "Rodízio de Mini-hambúrger com opção de entrada.",
+          "value": 29.9,
+          "quantity": 5
+        }
+      ],
+      "id": 22
+    },
+    {
+      "id": 23,
+      "address": "123",
+      "numeral": "123",
+      "complement": "123",
+      "paymentForm": "dinheiro",
+      "items": [
+        {
+          "id": 1,
+          "image": {
+            "url": "/assets/ofertas/1/img1.jpg"
+          },
+          "title": "Super Burger",
+          "description": "Rodízio de Mini-hambúrger com opção de entrada.",
+          "value": 29.9,
+          "quantity": 5
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "address": "123",
+      "numeral": "123",
+      "complement": "123",
+      "paymentForm": "dinheiro",
+      "items": [
+        {
+          "id": 1,
+          "image": {
+            "url": "/assets/ofertas/1/img1.jpg"
+          },
+          "title": "Super Burger",
+          "description": "Rodízio de Mini-hambúrger com opção de entrada.",
+          "value": 29.9,
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "address": "Teste",
+      "numeral": "123",
+      "complement": "Teste",
+      "paymentForm": "dinheiro",
+      "items": [
+        {
+          "id": 1,
+          "image": {
+            "url": "/assets/ofertas/1/img1.jpg"
+          },
+          "title": "Super Burger",
+          "description": "Rodízio de Mini-hambúrger com opção de entrada.",
+          "value": 29.9,
+          "quantity": 3
+        },
+        {
+          "id": 4,
+          "image": {
+            "url": "/assets/ofertas/3/img1.jpg"
+          },
+          "title": "Estância das águas",
+          "description": "Diversão garantida com piscinas, trilhas e muito mais.",
+          "value": 31.9,
+          "quantity": 3
+        }
+      ]
+    }
+  ]
+}
