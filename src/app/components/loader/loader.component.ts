@@ -1,18 +1,15 @@
-import { Component, OnInit } from '@angular/core';
-import { LoaderService } from '../../services/loader.service';
+import { Component } from "@angular/core";
+import { LoaderService } from "../../services/loader.service";
 
 @Component({
-	selector: 'app-loader',
-	templateUrl: './loader.component.html',
-	styleUrls: ['./loader.component.css']
+	selector: "app-loader",
+	templateUrl: "./loader.component.html",
+	styleUrls: ["./loader.component.css"]
 })
-export class LoaderComponent implements OnInit {
-
-	public show: boolean;
-
+export class LoaderComponent {
 	constructor(private loaderService: LoaderService) {
-		this.loaderService.isLoading.subscribe((v) => this.show = v);
+		this.loaderService.isLoading.subscribe(v => (this.show = v));
 	}
 
-	ngOnInit() { }
+	public show: boolean;
 }

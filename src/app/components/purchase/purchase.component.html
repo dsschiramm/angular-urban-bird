@@ -1,115 +1,196 @@
 <div class="container">
 	<div class="mb-5" *ngIf="idOrder === undefined">
-		
 		<ng-template #noItems>
 			<div class="mt-5 d-flex justify-content-center">
-				<h4>Seu carrinho está vazio! Não perca tempo, aproveite as ofertas.</h4>
+				<h4>
+					Seu carrinho está vazio! Não perca tempo, aproveite as
+					ofertas.
+				</h4>
 			</div>
 		</ng-template>
 
-		<form *ngIf="items.length else noItems" [formGroup]="formulary" (ngSubmit)="confirm()" novalidate>
-			
+		<form
+			*ngIf="items.length; else noItems"
+			[formGroup]="formulary"
+			(ngSubmit)="confirm()"
+			novalidate
+		>
 			<h5>Sua Compra</h5>
 			<hr />
-			
-			<div *ngFor="let item of items" class="form-row" style="background: #FAFAFA; padding: 20px; border-bottom: solid 1px #F0F0F0">
+
+			<!-- @TODO remove style attribute -->
+			<div
+				*ngFor="let item of items"
+				class="form-row"
+				style="background: #FAFAFA; padding: 20px; border-bottom: solid 1px #F0F0F0"
+			>
 				<div class="form-group col-sm-1">
-					<img [src]="item.image.url" class="img-fluid">
+					<img [src]="item.image.url" class="img-fluid" />
 				</div>
-				
+
 				<div class="form-group col-sm-6">
 					{{ item.title }}
 					<br />
 					{{ item.description }}
 				</div>
-				
+
 				<div>
 					<div class="row">
 						<div class="col">
-							<button (click)="subtractQuantity(item)" type="button" class="btn btn-link">-</button>
+							<button
+								(click)="subtractQuantity(item)"
+								type="button"
+								class="btn btn-link"
+							>
+								-
+							</button>
+
 							{{ item.quantity }}
-							<button (click)="addQuantity(item)" type="button" class="btn btn-link">+</button>
+
+							<button
+								(click)="addQuantity(item)"
+								type="button"
+								class="btn btn-link"
+							>
+								+
+							</button>
 						</div>
 					</div>
 				</div>
-				
+
 				<div class="form-group col-sm-3 d-flex justify-content-end">
-					{{ item.value | currency:'BRL' }}
+					{{ item.value | currency: "BRL" }}
 				</div>
 			</div>
-			
+
 			<div class="form-row">
 				<div class="form-group col d-flex justify-content-end">
-					<h4>Total do pedido: {{ getTotalValueCarried() | currency:'BRL' }}</h4>
+					<h4>
+						Total do pedido:
+						{{ getTotalValueCarried() | currency: "BRL" }}
+					</h4>
 				</div>
 			</div>
 			<br />
-			
+
 			<h5>Dados de entrega</h5>
 			<hr />
-			
+
 			<div class="form-row">
-				
 				<div class="form-group col-md-6">
-					<input 
-					type="text" 
-					class="form-control" 
-					placeholder="Endereço" 
-					autocomplete="off" 
-					formControlName="address" />
-					
-					<small *ngIf="formulary.get('address').valid && formulary.get('address').touched" class="form-text text-success">Ok</small>
-					<small *ngIf="!formulary.get('address').valid && formulary.get('address').touched" class="form-text text-danger">Endereço inválido</small>
+					<input
+						type="text"
+						class="form-control"
+						placeholder="Endereço"
+						autocomplete="off"
+						formControlName="address"
+					/>
+
+					<small
+						*ngIf="
+							formulary.get('address').valid &&
+							formulary.get('address').touched
+						"
+						class="form-text text-success"
+					>
+						Ok
+					</small>
+
+					<small
+						*ngIf="
+							!formulary.get('address').valid &&
+							formulary.get('address').touched
+						"
+						class="form-text text-danger"
+					>
+						Endereço inválido
+					</small>
 				</div>
-				
+
 				<div class="form-group col-md-2">
-					<input 
-					type="text" 
-					class="form-control" 
-					placeholder="Número" 
-					autocomplete="off"
-					formControlName="numeral">
-					
-					<small *ngIf="formulary.get('numeral').valid && formulary.get('numeral').touched" class="form-text text-success">Ok</small>
-					<small *ngIf="!formulary.get('numeral').valid && formulary.get('numeral').touched" class="form-text text-danger">Número inválido</small>
+					<input
+						type="text"
+						class="form-control"
+						placeholder="Número"
+						autocomplete="off"
+						formControlName="numeral"
+					/>
+
+					<small
+						*ngIf="
+							formulary.get('numeral').valid &&
+							formulary.get('numeral').touched
+						"
+						class="form-text text-success"
+					>
+						Ok
+					</small>
+
+					<small
+						*ngIf="
+							!formulary.get('numeral').valid &&
+							formulary.get('numeral').touched
+						"
+						class="form-text text-danger"
+					>
+						Número inválido
+					</small>
 				</div>
-				
+
 				<div class="form-group col-md-4">
-					<input 
-					type="text" 
-					class="form-control" 
-					placeholder="Complemento" 
-					autocomplete="off"
-					formControlName="complement">
+					<input
+						type="text"
+						class="form-control"
+						placeholder="Complemento"
+						autocomplete="off"
+						formControlName="complement"
+					/>
 				</div>
-				
 			</div>
 			<br />
-			
+
 			<h5>Dados de pagamento</h5>
 			<hr />
-			
+
 			<div class="form-row">
-				
 				<div class="form-group col-md-3">
 					<select class="form-control" formControlName="paymentForm">
-						
 						<option value="">Selecione uma opção</option>
 						<option value="dinheiro">Dinheiro</option>
 						<option value="debito">Débito</option>
 					</select>
-					
-					<small *ngIf="formulary.get('paymentForm').valid && formulary.get('paymentForm').touched" class="form-text text-success">Ok</small>
-					<small *ngIf="!formulary.get('paymentForm').valid && formulary.get('paymentForm').touched" class="form-text text-danger">Forma de pagamento inválida</small>
+
+					<small
+						*ngIf="
+							formulary.get('paymentForm').valid &&
+							formulary.get('paymentForm').touched
+						"
+						class="form-text text-success"
+					>
+						Ok
+					</small>
+
+					<small
+						*ngIf="
+							!formulary.get('paymentForm').valid &&
+							formulary.get('paymentForm').touched
+						"
+						class="form-text text-danger"
+					>
+						Forma de pagamento inválida
+					</small>
 				</div>
 			</div>
-			
+
 			<hr />
-			<button type="submit" class="btn btn-primary btn-lg">Cofirmar compra</button>
+
+			<button type="submit" class="btn btn-primary btn-lg">
+				Cofirmar compra
+			</button>
 		</form>
 	</div>
-	
+
 	<div class="mb-5" *ngIf="idOrder !== undefined">
-		<app-purchase-success [idOrder]=idOrder></app-purchase-success>
+		<app-purchase-success [idOrder]="idOrder"></app-purchase-success>
 	</div>
 </div>

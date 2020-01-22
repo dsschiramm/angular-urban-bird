@@ -1,12 +1,11 @@
 import { Injectable } from "@angular/core";
-import { CarrierItem } from '../models/carrier-item.model';
-import { Offer } from '../models/offer.model';
+import { CarrierItem } from "../interfaces/carrier-item";
+import { Offer } from "../interfaces/offer";
 
 @Injectable({
-  providedIn: 'root'
+	providedIn: "root"
 })
-class CarrierService {
-
+export class CarrierService {
 	public items: CarrierItem[] = [];
 
 	public getItems(): CarrierItem[] {
@@ -14,17 +13,18 @@ class CarrierService {
 	}
 
 	public addItem(offer: Offer): void {
+		let itemCarrier: CarrierItem = {
+			id: offer.id,
+			image: offer.images[0],
+			title: offer.title,
+			description: offer.description,
+			value: offer.value,
+			quantity: 1
+		};
 
-		let itemCarrier: CarrierItem = new CarrierItem(
-			offer.id,
-			offer.images[0],
-			offer.title,
-			offer.description,
-			offer.value,
-			1
+		let itemCarrierFound = this.items.find(
+			(item: CarrierItem) => item.id === itemCarrier.id
 		);
-
-		let itemCarrierFound = this.items.find((item: CarrierItem) => item.id === itemCarrier.id);
 
 		if (itemCarrierFound) {
 			itemCarrierFound.quantity++;
@@ -34,19 +34,19 @@ class CarrierService {
 	}
 
 	public getTotalValueCarried(): number {
-
 		let total: number = 0;
 
 		this.items.map((item: CarrierItem) => {
-			total = total + (item.value * item.quantity);
+			total = total + item.value * item.quantity;
 		});
 
 		return total;
 	}
 
 	public addQuantity(itemCarrier: CarrierItem): void {
-
-		let itemCarrierFound = this.items.find((item: CarrierItem) => item.id === itemCarrier.id);
+		let itemCarrierFound = this.items.find(
+			(item: CarrierItem) => item.id === itemCarrier.id
+		);
 
 		if (itemCarrierFound) {
 			itemCarrierFound.quantity++;
@@ -54,8 +54,9 @@ class CarrierService {
 	}
 
 	public subtractQuantity(itemCarrier: CarrierItem): void {
-
-		let itemCarrierFound = this.items.find((item: CarrierItem) => item.id === itemCarrier.id);
+		let itemCarrierFound = this.items.find(
+			(item: CarrierItem) => item.id === itemCarrier.id
+		);
 
 		if (itemCarrierFound) {
 			itemCarrierFound.quantity--;
@@ -70,5 +71,3 @@ class CarrierService {
 		this.items = [];
 	}
 }
-
-export { CarrierService }

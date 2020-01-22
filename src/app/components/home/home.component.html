@@ -1,30 +1,37 @@
 <div class="container">
-	
+	<!-- @TODO remove class secao -->
 	<div class="secao">
 		<h3 class="text-center">{{ title }}</h3>
 		<h5 class="text-center">{{ subTitle }}</h5>
 	</div>
-	
+
 	<hr />
-	
+
 	<div class="row">
 		<div class="col-sm-4 mb-3" *ngFor="let offer of listOffer">
 			<div class="card">
-				<img class="card-img-top img-fluid" [src]="offer.images[0].url" alt="Responsive image">
-				
+				<img
+					class="card-img-top img-fluid"
+					[src]="offer.images[0].url"
+					alt="Responsive image"
+				/>
+
 				<div class="card-block p-3">
 					<h4 class="card-title">{{ offer.title }}</h4>
 					<p class="card-text">{{ offer.description }}</p>
-					<p class="preco">{{ offer.value | currency:'BRL' }}</p>
+					<p class="preco">{{ offer.value | currency: "BRL" }}</p>
 
-					<a [routerLink]="['/offer', offer.id]" routerLinkActive="router-link-active" class="btn btn-outline-primary">
+					<a
+						[routerLink]="['/offer', offer.id]"
+						routerLinkActive="router-link-active"
+						class="btn btn-outline-primary"
+					>
 						Visualizar
 					</a>
 				</div>
 			</div>
 		</div>
 	</div>
-	
+
 	<hr />
-	
 </div>
