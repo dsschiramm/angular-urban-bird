@@ -4,37 +4,32 @@ import { HttpClient, HttpParams } from "@angular/common/http";
 import { Offer } from "../interfaces/offer";
 import { WhereIs } from "../interfaces/where-is";
 import { HowToUse } from "../interfaces/how-to-use";
-import { map } from "rxjs/operators";
 
 @Injectable()
 export class OfferService {
 	constructor(private http: HttpClient) {}
 
-	public getOfferById(id: number): Observable<Offer> {
-		return this.http
-			.get<Offer[]>(`listOffer?id=${id}`)
-			.pipe(map((listOffer: Offer[]) => listOffer.shift()));
-	}
-
-	public getWhereIsOfferById(id: number): Observable<WhereIs> {
-		return this.http.get<WhereIs>(`where-is?offer_id=${id}`);
-	}
-
-	public getHowToUseOfferById(id: number): Observable<HowToUse> {
-		return this.http.get<HowToUse>(`how-to-use?offer_id=${id}`);
-	}
-
-	public getListOffer(): Observable<Array<Offer>> {
+	public getOfferList(): Observable<Offer[]> {
 		const options = { params: new HttpParams().set("spotlight", "true") };
 
-		return this.http.get<Offer[]>("listOffer", options);
+		return this.http.get<Offer[]>("offer/", options);
 	}
 
 	public getOfferByCategory(category: string): Observable<Array<Offer>> {
-		return this.http.get<Offer[]>(`listOffer?category=${category}`);
+		const options = { params: new HttpParams().set("category", category) };
+
+		return this.http.get<Offer[]>("offer/", options);
 	}
 
-	public getOffer(value: string): Observable<Offer[]> {
-		return this.http.get<Offer[]>(`listOffer?description_like=${value}`);
+	public getOfferById(id: number): Observable<Offer> {
+		return this.http.get<Offer>(`offer/${id}`);
+	}
+
+	public getWhereIsByOfferId(id: number): Observable<WhereIs[]> {
+		return this.http.get<WhereIs[]>(`where-is?offer_id=${id}`);
+	}
+
+	public getHowToUseByOfferId(id: number): Observable<HowToUse[]> {
+		return this.http.get<HowToUse[]>(`how-to-use?offer_id=${id}`);
 	}
 }

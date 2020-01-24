@@ -14,12 +14,12 @@ export class HomeComponent implements OnInit {
 
 	public title = "Promoções do dia!";
 	public subTitle = "Aproveite as super ofertas que nós temos para você!";
-	public listOffer: Offer[];
+	public offerList: Offer[];
 
 	ngOnInit() {
 		this.offerService
-			.getListOffer()
+			.getOfferList()
 			.pipe(take(1))
-			.subscribe((listOffer: Offer[]) => (this.listOffer = listOffer));
+			.subscribe((offerList: Offer[]) => (this.offerList = offerList));
 	}
 }

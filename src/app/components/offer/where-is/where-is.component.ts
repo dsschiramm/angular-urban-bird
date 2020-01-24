@@ -16,20 +16,16 @@ export class WhereIsComponent implements OnInit {
 		private offerService: OfferService
 	) {}
 
-	public whereIs: WhereIs = {
-		offer_id: null,
-		description: ""
-	};
+	public whereIsList: WhereIs[];
 
 	ngOnInit() {
 		this.route.parent.params.pipe(take(1)).subscribe((params: Params) => {
 			this.offerService
-				.getWhereIsOfferById(params.id)
+				.getWhereIsByOfferId(params.id)
 				.pipe(take(1))
-				.subscribe((whereIs: WhereIs) => {
-					console.log("whereIs ", whereIs);
-					this.whereIs = whereIs;
-				});
+				.subscribe(
+					(whereIsList: WhereIs[]) => (this.whereIsList = whereIsList)
+				);
 		});
 	}
 }

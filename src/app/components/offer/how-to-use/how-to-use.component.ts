@@ -16,17 +16,17 @@ export class HowToUseComponent implements OnInit {
 		private offerService: OfferService
 	) {}
 
-	public howToUse: HowToUse = {
-		offer_id: null,
-		description: ""
-	};
+	public howToUseList: HowToUse[];
 
 	ngOnInit() {
 		this.route.parent.params.pipe(take(1)).subscribe((params: Params) => {
 			this.offerService
-				.getWhereIsOfferById(params.id)
+				.getHowToUseByOfferId(params.id)
 				.pipe(take(1))
-				.subscribe((howToUse: HowToUse) => (this.howToUse = howToUse));
+				.subscribe(
+					(howToUseList: HowToUse[]) =>
+						(this.howToUseList = howToUseList)
+				);
 		});
 	}
 }
